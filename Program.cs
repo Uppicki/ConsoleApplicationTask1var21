@@ -13,7 +13,7 @@ namespace ConsoleApplicationTask1var21
             int[,] array1 = new int[,]
             {
                 {1, 2, 3, 4, 5, 6},
-                {-1, -2, -3, -4, -5, -6},
+                {-1, -2, -3, -4, -5, 0},
                 {7, 8, 9, 9, 8, 6}
             };
             
@@ -48,12 +48,14 @@ namespace ConsoleApplicationTask1var21
         {
             int sum = 0;
             int amount = 0;
+
+            int number;
             
             for (int i = 0; i <= array.GetUpperBound(0); i++)
             {
                 for (int j = 0; j <= array.GetUpperBound(1); j++)
                 {
-                    int number = array[i, j];
+                    number = array[i, j];
                     if (number % 3 == 0) sum+=number;
                     if (number < 0) amount++;
                 }
